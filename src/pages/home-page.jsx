@@ -1,6 +1,14 @@
+import Services from "@/cmps/services"
+import HomeSwiper from "@/cmps/home-swiper"
+import HomeAbout from "@/cmps/home-about"
+
 function HomePage() {
     return (
-        <section className="home-page">home-page</section>
+        <div className="home-page">
+            <HomeSwiper />
+            <Services />
+            <HomeAbout />
+        </div>
     )
 }
 

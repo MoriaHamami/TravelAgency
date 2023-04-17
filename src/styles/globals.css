@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 
-/* Cmps */
-@import "cmps/header.css";
-@import "cmps/footer.css";
-
 :root {
   --main-color: #8e44ad;
   --black: #222;
@@ -45,12 +41,36 @@ html::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
 }
 
-section,footer,header{
+section,
+footer,
+header {
   padding: 5rem 10%;
 }
 
+.heading {
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--black);
+  margin-top: 1rem;
+  color: var(--white);
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--main-color);
+}
+
 @media(max-width:1200px) {
-  section,footer,header{
+
+  section,
+  footer,
+  header {
     padding: 3rem 5%;
   }
 }
@@ -59,7 +79,10 @@ section,footer,header{
   html {
     font-size: 55%;
   }
-  section,footer,header{
+
+  section,
+  footer,
+  header {
     padding: 3rem 2rem;
   }
 }
@@ -69,3 +92,22 @@ section,footer,header{
     font-size: 50%;
   }
 }
+
+@keyframes fadeIn {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Pages */
+@import "pages/home-page.css";
+@import "pages/about.css";
+@import "pages/book.css";
+@import "pages/package.css";
+
+/* Cmps */
+@import "cmps/header.css";
+@import "cmps/footer.css";
+@import "cmps/services.css";
+@import "cmps/home-swiper.css";
