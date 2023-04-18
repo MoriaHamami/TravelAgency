@@ -111,3 +111,6 @@ header {
 @import "cmps/footer.css";
 @import "cmps/services.css";
 @import "cmps/home-swiper.css";
+@import "cmps/home-about.css";
+@import "cmps/home-package.css";
+@import "cmps/home-offer.css";
