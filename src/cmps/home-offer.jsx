@@ -1,6 +1,3 @@
-// import aboutImg from "../imgs/about-img.jpg"
-// import Image from 'next/image'
-
 function HomeOffer() {
     return (
         <section className="home-offer">
@@ -9,9 +6,6 @@ function HomeOffer() {
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam explicabo nihil commodi excepturi laborum cum quaerat totam ipsa animi praesentium!</p>
                 <a href="/book" className="btn">book now</a>
             </article>
-            {/* <div className="img-container">
-                <Image fill src={aboutImg} alt="" />
-            </div> */}
         </section>
     )
 }

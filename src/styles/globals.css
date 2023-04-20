@@ -48,8 +48,20 @@ header {
 }
 
 .heading {
-  background-size: cover;
-  background-position: center;
+  background-size: cover !important;
+  background-position: bottom !important;
+  padding-top: 10rem;
+  padding-bottom: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+}
+
+.heading h1 {
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: var(--text-shadow);
 }
 
 .btn {
@@ -73,6 +85,12 @@ header {
   header {
     padding: 3rem 5%;
   }
+
+  .heading {
+    padding-top: 10rem;
+    padding-bottom: 23rem;
+    font-size: 6rem;
+  }
 }
 
 @media(max-width:991px) {
@@ -85,6 +103,12 @@ header {
   header {
     padding: 3rem 2rem;
   }
+
+  .heading {
+    padding-top: 10rem;
+    font-size: 3rem;
+    padding-bottom: 20rem;
+  }
 }
 
 @media(max-width:450px) {
@@ -94,7 +118,7 @@ header {
 }
 
 @keyframes fadeIn {
-  0%{
+  0% {
     transform: scale(0);
     opacity: 0;
   }
@@ -110,6 +134,7 @@ header {
 @import "cmps/header.css";
 @import "cmps/footer.css";
 @import "cmps/services.css";
+@import "cmps/reviews.css";
 @import "cmps/home-swiper.css";
 @import "cmps/home-about.css";
 @import "cmps/home-package.css";
