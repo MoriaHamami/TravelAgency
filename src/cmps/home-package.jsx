@@ -6,7 +6,7 @@ import Image from 'next/image'
 function HomePackage() {
     return (
         <section className="home-package">
-            <h1 className="heading">our packages</h1>
+            <h1 className="heading-title">our packages</h1>
             <div className="box-container">
                 <div className="box">
                     <div className="img-container">

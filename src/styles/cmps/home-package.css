@@ -15,7 +15,19 @@
 }
 
 .home-package .img-container img {
-    transition: 2s linear;
+    transition: 1s;
+}
+
+.home-package .box:hover .img-container img {
+    transform: scale(1.1);
+}
+
+.heading-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
 }
 
 .home-package article {
