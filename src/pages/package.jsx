@@ -1,41 +1,55 @@
+import PackageList from "@/cmps/package-list"
+import { packageService } from "@/services/package.service"
 import Image from "next/image"
-import img1 from "../imgs/img-1.jpg"
-import img2 from "../imgs/img-2.jpg"
-import img3 from "../imgs/img-3.jpg"
-import img4 from "../imgs/img-4.jpg"
-import img5 from "../imgs/img-5.jpg"
-import img6 from "../imgs/img-6.jpg"
-import img7 from "../imgs/img-7.jpg"
-import img8 from "../imgs/img-8.jpg"
-import img9 from "../imgs/img-9.jpg"
-import img10 from "../imgs/img-10.jpg"
-import img11 from "../imgs/img-11.jpg"
-import img12 from "../imgs/img-12.jpg"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function Package() {
 
-    const [shownCount, setShownCount] = useState(1)
+    const [shownCount, setShownCount] = useState(3)
+    const [packages, setPackages] = useState([])
+
+    useEffect(()=>{
+        loadPackages()
+    }, [])
+
+    async function loadPackages(){
+        try{
+            // const filterBy = { amount: shownCount}
+            const packages = await packageService.query()
+            setPackages(packages)
+        }catch(err){
+            console.log('err:', err)
+        }
+    }
 
     function onSetShownCount() {
         // Change later on to 
-        if (shownCount >= 12 / 3) setShownCount(1)
-        else setShownCount(prevCount => prevCount+1)
+        if (shownCount >= 12) setShownCount(3)
+        else setShownCount(prevCount => prevCount+3)
     }
+
+    // const [shownCount, setShownCount] = useState(1)
+
+    // function onSetShownCount() {
+    //     // Change later on to 
+    //     if (shownCount >= 12 / 3) setShownCount(1)
+    //     else setShownCount(prevCount => prevCount+1)
+    // }
 
     return (
         <div className="package">
             <div className="heading">
                 <h1>Packages</h1>
             </div>
-            {console.log('shownCount:', shownCount)}
+            {/* {console.log('shownCount:', shownCount)} */}
             {/* PackageList: */}
-            <section>
+            <PackageList packages={packages} onSetShownCount={onSetShownCount} shownCount={shownCount}/>
+            {/* <section>
                 <h1 className="heading-title">top destinations</h1>
                 <div className="box-container">
                     <div className="box">
                         <div className="img-container">
-                            <Image fill src={img1} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327862/travelagency/img-1_q6cjin.jpg" alt="" />
                         </div>
                         <article>
                             <h3>adventure & tour</h3>
@@ -47,7 +61,7 @@ function Package() {
                     </div>
                     <div className="box">
                         <div className="img-container">
-                            <Image fill src={img2} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327862/travelagency/img-2_xunxx9.jpg" alt="" />
                         </div>
                         <article>
                             <h3>travel & trek</h3>
@@ -59,7 +73,7 @@ function Package() {
                     </div>
                     <div className="box">
                         <div className="img-container">
-                            <Image fill src={img3} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327862/travelagency/img-3_itnsww.jpg" alt="" />
                         </div>
                         <article>
                             <h3>wilderness & camp</h3>
@@ -73,7 +87,7 @@ function Package() {
                         <>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img7} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327863/travelagency/img-7_t3gq4n.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>adventure & tour</h3>
@@ -85,7 +99,7 @@ function Package() {
                             </div>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img4} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327862/travelagency/img-4_vyqf8g.webp" alt="" />
                                 </div>
                                 <article>
                                     <h3>travel & trek</h3>
@@ -97,7 +111,7 @@ function Package() {
                             </div>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img10} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327863/travelagency/img-10_uryntg.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>wilderness & camp</h3>
@@ -112,7 +126,7 @@ function Package() {
                         <>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img8} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327863/travelagency/img-8_qfvwpx.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>adventure & tour</h3>
@@ -124,7 +138,7 @@ function Package() {
                             </div>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img5} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327863/travelagency/img-5_opexyl.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>travel & trek</h3>
@@ -136,7 +150,7 @@ function Package() {
                             </div>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img11} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327864/travelagency/img-11_fdpzpe.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>wilderness & camp</h3>
@@ -151,7 +165,7 @@ function Package() {
                         <>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img9} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327863/travelagency/img-9_khngky.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>adventure & tour</h3>
@@ -163,7 +177,7 @@ function Package() {
                             </div>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img6} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327863/travelagency/img-6_mv0rrw.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>travel & trek</h3>
@@ -175,7 +189,7 @@ function Package() {
                             </div>
                             <div className="box">
                                 <div className="img-container">
-                                    <Image fill src={img12} alt="" />
+                                    <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327861/travelagency/img-12_ndidok.jpg" alt="" />
                                 </div>
                                 <article>
                                     <h3>wilderness & camp</h3>
@@ -189,11 +203,10 @@ function Package() {
                 </div>
                 <div className="load-more" onClick={onSetShownCount}>
                     <span className="btn">
-                        {/* Change to database length later on */}
                         {shownCount >= 12 / 3 ? 'show less' : 'load more'}
                     </span>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }

@@ -10,12 +10,6 @@ import 'swiper/css/scrollbar';
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import pic1 from "../imgs/pic-1.png"
-import pic2 from "../imgs/pic-2.png"
-import pic3 from "../imgs/pic-3.png"
-import pic4 from "../imgs/pic-4.png"
-import pic5 from "../imgs/pic-5.png"
-import pic6 from "../imgs/pic-6.png"
 import Image from 'next/image'
 
 function Reviews() {
@@ -52,7 +46,7 @@ function Reviews() {
                         <h3>john deo</h3>
                         <span>traveler</span>
                         <div className="img-container">
-                            <Image fill src={pic1} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327860/travelagency/pic-1_bagloy.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -68,7 +62,7 @@ function Reviews() {
                         <h3>gil don</h3>
                         <span>explorer</span>
                         <div className="img-container">
-                            <Image fill src={pic2} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327860/travelagency/pic-2_timo2g.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -83,7 +77,7 @@ function Reviews() {
                         <h3>blake jin</h3>
                         <span>traveler</span>
                         <div className="img-container">
-                            <Image fill src={pic3} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327860/travelagency/pic-3_tzf7mp.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -100,7 +94,7 @@ function Reviews() {
                         <h3>bar hem</h3>
                         <span>explorer</span>
                         <div className="img-container">
-                            <Image fill src={pic4} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327860/travelagency/pic-4_z8eb6n.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -116,7 +110,7 @@ function Reviews() {
                         <h3>george yellow</h3>
                         <span>traveler</span>
                         <div className="img-container">
-                            <Image fill src={pic5} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327860/travelagency/pic-5_u3ttx6.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -132,7 +126,7 @@ function Reviews() {
                         <h3>jim grand</h3>
                         <span>explorer</span>
                         <div className="img-container">
-                            <Image fill src={pic6} alt="" />
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327861/travelagency/pic-6_afkzxg.jpg" alt="" />
                         </div>
                     </div>
                 </SwiperSlide>
