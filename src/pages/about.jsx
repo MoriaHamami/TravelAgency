@@ -4,9 +4,27 @@ import { faMap } from "@fortawesome/free-solid-svg-icons"
 import { faHandHoldingUsd } from "@fortawesome/free-solid-svg-icons"
 import { faHeadset } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Reviews from "@/cmps/reviews"
+import ReviewList from "@/cmps/review-list"
+import { reviewService } from "@/services/review.service"
+import { useEffect, useState } from "react"
 
 function About() {
+
+    const [reviews, setReviews] = useState([])
+
+    useEffect(()=>{
+        loadReviews()
+    }, [])
+
+    async function loadReviews(){
+        try{
+            const reviews = await reviewService.query()
+            setReviews(reviews)
+        }catch(err){
+            console.log('err:', err)
+        }
+    }
+
     return (
         <div className="about">
             <div className="heading">
@@ -35,7 +53,7 @@ function About() {
                         </div>
                     </div>
                 </article>
-                <Reviews />
+                <ReviewList reviews={reviews}/>
             </section>
         </div>
     )

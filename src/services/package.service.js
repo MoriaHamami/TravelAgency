@@ -1,7 +1,8 @@
 import Axios from 'axios'
 
 const STORAGE_KEY = 'package'
-const BASE_URL = '//localhost:3030/api/'
+const BASE_URL = '//localhost:3030/api'
+var FormData = require('form-data');
 
 export const packageService = {
     query,
@@ -9,18 +10,22 @@ export const packageService = {
     update,
     remove
 }
-
-async function query(filterBy) {
+// query()
+async function query(filterBy=null) {
+    const filter = JSON.stringify(filterBy)
+    // let filter = new FormData(filterBy);
+    // filter.append('action', 'getPackages');
     try {
         const res = await Axios({
-            url: `${BASE_URL}${STORAGE_KEY}?action=getPackages`,
+            url: `${BASE_URL}${STORAGE_KEY}?action=getPackages&filterBy=${filter}`,
             method: 'GET',
-            data: null,
+            // data: form,
             params: null,
             // headers: {
             //     'Content-Type': 'text/plain'
             // },
         })
+        console.log('res.data:', res.data)
         return res.data
     } catch(err) {
         console.log('err:', err)
@@ -29,11 +34,14 @@ async function query(filterBy) {
 }
 // add()
 async function add() {
+
+    let form = new FormData();
+    form.append('my_field', 'my value');
     try {
         const res = await Axios({
             url: `${BASE_URL}${STORAGE_KEY}?action=addPackage`,
             method: 'POST',
-            data: 'data=hi',
+            data: form,
             params: null,
             // headers: {
             //     'Content-Type': 'text/plain'

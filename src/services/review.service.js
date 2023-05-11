@@ -13,14 +13,16 @@ export const reviewService = {
 async function query() {
     try {
         const res = await Axios({
-            url: `${BASE_URL}${STORAGE_KEY}?action=query`,
+            url: `${BASE_URL}${STORAGE_KEY}?action=getReviews`,
             method: 'GET',
             data: null,
             params: null,
-            headers: {
-                'Content-Type': 'text/plain'
-            },
+            // headers: {
+            //     'Content-Type': 'text/plain'
+            // },
         })
+        console.log('res.data:', res.data)
+
         return res.data
     } catch {
         console.dir('Had issues getting reviews from DB')

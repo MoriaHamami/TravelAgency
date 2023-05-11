@@ -11,8 +11,9 @@ import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Image from 'next/image'
+import ReviewPreview from './review-preview';
 
-function Reviews() {
+function ReviewList({ reviews }) {
     return (
         <section className="reviews">
             <Swiper
@@ -34,6 +35,32 @@ function Reviews() {
 
             >
                 <SwiperSlide className='swiper-slide-1'>
+                    <div className="slide">
+                        <div className="stars">
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae ratione error iusto, nisi laudantium enim. Cupiditate ea perspiciatis, quod ratione rem, ipsum, cumque ipsam voluptas nisi tenetur beatae sint minus.</p>
+                        <h3>emma hope</h3>
+                        <span>explorer</span>
+                        <div className="img-container">
+                            <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327860/travelagency/pic-3_tzf7mp.jpg" alt="" />
+                        </div>
+                    </div>
+                </SwiperSlide>
+                {/* {reviews.length && <ul className="box-container"> */}
+                {reviews.length && reviews.map(review => {
+                    return (
+                        <SwiperSlide>
+                            <ReviewPreview review={review} />
+                        </SwiperSlide>
+                    )
+                })}
+                {/* </ul>} */}
+                {/* <SwiperSlide className='swiper-slide-1'>
                     <div className="slide">
                         <div className="stars">
                             <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
@@ -129,7 +156,7 @@ function Reviews() {
                             <Image fill src="https://res.cloudinary.com/dslabmwf7/image/upload/v1682327861/travelagency/pic-6_afkzxg.jpg" alt="" />
                         </div>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
 
             </Swiper>
 
@@ -137,4 +164,4 @@ function Reviews() {
     )
 }
 
-export default Reviews
+export default ReviewList

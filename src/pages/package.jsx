@@ -10,12 +10,12 @@ function Package() {
 
     useEffect(()=>{
         loadPackages()
-    }, [])
+    }, [shownCount])
 
     async function loadPackages(){
         try{
-            // const filterBy = { amount: shownCount}
-            const packages = await packageService.query()
+            const filterBy = { amount: shownCount}
+            const packages = await packageService.query(filterBy)
             setPackages(packages)
         }catch(err){
             console.log('err:', err)
@@ -23,9 +23,10 @@ function Package() {
     }
 
     function onSetShownCount() {
-        // Change later on to 
-        if (shownCount >= 12) setShownCount(3)
-        else setShownCount(prevCount => prevCount+3)
+        setShownCount(prevCount => {
+            if(prevCount >= 12) return 3
+            return prevCount+3
+        })
     }
 
     // const [shownCount, setShownCount] = useState(1)

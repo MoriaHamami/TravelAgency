@@ -1,10 +1,18 @@
 <?php
 
-    function getPackages($con, $data){
+    // function getPackages($con){
+    function getPackages($con, $filterBy){
         $packageTable = "package";
         // Define data to get from server
-        $sql = "SELECT * 
-            FROM $packageTable";
+        $packageAmount = $filterBy->amount;
+        if($packageAmount){
+            $sql = "SELECT *
+                FROM $packageTable
+                LIMIT $packageAmount";
+        }else{
+            $sql = "SELECT * 
+                FROM $packageTable";
+        }
 
         // Get data from server
         $stmt = $con->prepare($sql);

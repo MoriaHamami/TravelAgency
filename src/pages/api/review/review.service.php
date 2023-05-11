@@ -1,6 +1,6 @@
 <?php
 
-    function getReviews($con, $data){
+    function getReviews($con){
         $reviewTable = "review";
         // Define data to get from server
         $sql = "SELECT * 

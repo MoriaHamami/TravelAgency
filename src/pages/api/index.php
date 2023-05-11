@@ -29,27 +29,30 @@
 
 		$action = $_REQUEST['action'];
 		// $action = null;
+        $filterBy = isset($_GET['filterBy'])?json_decode($_GET['filterBy']):'';
 
         $connection = getConnection();
 
 		switch ($action) {
 		    case "getPackages":
-                $json = getPackages($connection, $data);
+                // $json = getPackages($connection);
+                $json = getPackages($connection, $filterBy);
                 break;
             case "getReviews":
-                $json = getReviews($connection, $data);
+                $json = getReviews($connection);
                 break;
 		    default:
                 $json = array("success" => false, "Info" => "Request method not available!");
 		}
-
+        // $json = $_REQUEST;
+        
         $connection = null;
 		echo json_encode($json);
 
     }elseif($request_method == "POST"){
 
 		$action = $_REQUEST['action'];
-		// $action = null;
+		$action = null;
         $connection = getConnection();
 
 		switch ($action) {
@@ -62,8 +65,9 @@
 		    default:
                 $json = array("success" => false, "Info" => "Request method not available!");
 		}
-        // $json = $_POST;
 
+        $json = $_POST;
+        // $json = $data;
         $connection = null;
 		echo json_encode($json);
 

@@ -1,7 +1,12 @@
 function BookForm() {
+
+    function onBookTrip(ev){
+        ev.preventDefault()
+    }
+    
     return (
         <section className="book-form">
-            <form>
+            <form onSubmit={onBookTrip}>
                 <div className="flex">
                     <div className="input-box">
                         <span>name :</span>
