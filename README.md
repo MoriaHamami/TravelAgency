@@ -2,7 +2,7 @@
     <h1>Travel Agency</h1>
 </div>
 
-Travel Agency is a marketing website, allowing customers to book trips.
+Travel Agency is a completely responsive marketing website, allowing customers to book trips and tours worldwide.
 
 https://github.com/MoriaHamami/TravelAgency/assets/100145853/39d5b206-a7e5-4ffa-9d13-187b74022d91
 
