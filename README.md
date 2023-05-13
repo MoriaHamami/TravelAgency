@@ -10,20 +10,8 @@ ___
 
 
 ### Table of Contents
-- [Showcase](#showcase)
 - [Technologies](#technologies)
-
-## Showcase
-
-### Homepage
-The landing page, in which the user is introduced to the travel agency, includes a swiper with eye catching transformations.
-
-![Homepage image](src/imgs/readme1.png "Home-page")
-
-### A mobile fit!
-The use of **conditional rendering** enabled creating a responsive design. Just a taste of the mobile experience:
-
-<img src="src/imgs/readme2.png" width="33%" style="float: left"/><img src="src/imgs/readme3.png" width="33%" style="float: left;"/><img src="src/imgs/readme4.png" width="33%" style="float: left;"/>
+- [Showcase](#showcase)
 
 ## Technologies
 
@@ -47,6 +35,16 @@ The main features of this website are:
 
 ✅ Footer section using grid.
 
+## Showcase
 
+### Homepage
+The landing page, in which the user is introduced to the travel agency, includes a swiper with eye catching transformations.
+
+![Homepage image](src/imgs/readme1.png "Home-page")
+
+### A mobile fit!
+The use of **conditional rendering** enabled creating a responsive design. Just a taste of the mobile experience:
+
+<img src="src/imgs/readme2.png" width="33%" style="float: left"/><img src="src/imgs/readme3.png" width="33%" style="float: left;"/><img src="src/imgs/readme4.png" width="33%" style="float: left;"/>
 
 
