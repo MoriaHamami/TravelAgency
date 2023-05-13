@@ -46,8 +46,8 @@ The landing page, in which the user is introduced to the travel agency, includes
 The use of **conditional rendering** enabled creating a responsive design. Just a taste of the mobile experience:
 
 <div id="header" align="center">
-    <img src="src/imgs/readme2.png" style="width: 33%;" width="33%" />
-    <img src="src/imgs/readme3.png" style="width: 33%;"  width="33%" />
-    <img src="src/imgs/readme4.png" style="width: 33%;"  width="33%" />
+    <img src="src/imgs/readme2.png" width="33%" />
+    <img src="src/imgs/readme3.png" width="33%" />
+    <img src="src/imgs/readme4.png" width="33%" />
 </div>
 
