@@ -32,12 +32,19 @@ The API calls to the backend are done using axios, while the data is fetched usi
 Several third side libraries were used for different goals, such as axios, swiper, form-data and more.
 
 The main features of this website are:
+
 ✅ Header with toggle menu effect using vanilla javascript.
+
 ✅ Home section with touch slider using swiper.js
+
 ✅ About section using flexbox.
+
 ✅ Reviews section with touch slider using swiper.js
+
 ✅ Packages section using grid.
+
 ✅ Booking form section.
+
 ✅ Footer section using grid.
 
 
