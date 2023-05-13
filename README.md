@@ -15,7 +15,7 @@ ___
 
 ## Technologies
 
-A complete responsive travel agency website, created using React & Next.js frameworks, HTML, CSS vanilla and Javascript.  
+A completely responsive travel agency website, created using React & Next.js frameworks, HTML, CSS vanilla and Javascript.  
 The API calls to the backend are done using axios, while the data is fetched using PHP and SQL from a MySQL database.
 Several third side libraries were used for different goals, such as axios, swiper, form-data and more.
 
