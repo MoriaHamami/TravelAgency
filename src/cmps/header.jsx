@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <header className="header">
-            <a href="/home-page" className="logo">travel.</a>
+            <a href="/home-page" className="logo">gopiny.</a>
             <nav className={`navbar ${isMenuOpen && 'open'}`}>
                 <a className={getClassName('home')} onClick={()=>setIsActive('home')} href="/home-page">Home</a>
                 <a  className={getClassName('package')} onClick={()=>setIsActive('package')} href="/package">Package</a>

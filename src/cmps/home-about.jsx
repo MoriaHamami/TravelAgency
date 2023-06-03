@@ -10,7 +10,7 @@ function HomeAbout() {
             <article>
                 <h3>about us</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit necessitatibus sint similique nostrum dicta, earum laborum, exercitationem rem nemo fuga sed repellat cumque qui blanditiis voluptatum tenetur commodi molestiae! Blanditiis.
+                Experience the wonders of Lake Victoria with us. Explore breathtaking landscapes, immerse in authentic cultural encounters, and create lasting memories. Join Gopiny Experience today.
                 </p>
                 <a href="/about" className="btn">read more</a>
             </article>

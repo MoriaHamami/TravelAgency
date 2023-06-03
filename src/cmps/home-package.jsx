@@ -13,9 +13,9 @@ function HomePackage() {
                         <Image fill src={img1} alt="" />
                     </div>
                     <article>
-                        <h3>adventure & tour</h3>
+                        <h3>Sunrise Cruise Package</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum sequi, repudiandae quo ducimus atque soluta omnis quaerat ex dolorem, laboriosam placeat iusto rem voluptate minus. Obcaecati pariatur suscipit ipsam porro.
+                        Witness the beauty of Lake Victoria's daybreak with a captivating sunrise cruise. Sail along calm waters, mingle with local fishermen, and marvel at the grazing hippos and soaring birds. Immerse yourself in the tranquility of the morning breeze while creating unforgettable memories.
                         </p>
                         <a href="/book" className="btn">book now</a>
                     </article>
@@ -25,9 +25,9 @@ function HomePackage() {
                         <Image fill src={img2} alt="" />
                     </div>
                     <article>
-                        <h3>travel & trek</h3>
+                        <h3>Kakamega Forest Exploration</h3>
                         <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum facilis ab excepturi id quis aspernatur eveniet cupiditate perspiciatis vitae sint!
+                        Embark on a journey to Kakamega Forest, the remnants of a rainforest stretching from West Africa. Encounter diverse tree species, vibrant birdlife, and playful monkeys. Explore this enchanting forest and create lasting memories amidst its natural wonders.
                         </p>
                         <a href="/book" className="btn">book now</a>
                     </article>
@@ -37,9 +37,9 @@ function HomePackage() {
                         <Image fill src={img3} alt="" />
                     </div>
                     <article>
-                        <h3>wilderness & camp</h3>
+                        <h3>Ndere Island Adventure</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero alias quos, ducimus explicabo laudantium dolor minima neque incidunt blanditiis, voluptates quibusdam non quas. Eaque, nulla.
+                        Set sail to Ndere Island National Park or embark on a thrilling fishing trip around the archipelago of smaller islands. Enjoy the pristine beauty of the island, witness diverse wildlife, and engage in exciting water activities. Experience the captivating allure of Lake Victoria's hidden gems.
                         </p>
                         <a href="/book" className="btn">book now</a>
                     </article>

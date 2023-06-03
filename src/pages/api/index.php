@@ -10,10 +10,10 @@
     // get the database connection
     function getConnection(){
         
-        $host = "localhost";
+        $host = "containers-us-west-193.railway.app";
         $username = "root";
-        $password = "";
-        $database = "travelagency";
+        $password = "ciaDdMHbwF2iHi6YuOpE";
+        $database = "railway";
         try{
             $conn = new PDO("mysql:host=$host;dbname=$database", $username, $password);
             return $conn;
